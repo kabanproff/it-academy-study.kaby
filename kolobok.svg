@@ -1,0 +1,23 @@
+<svg width="600" height="306" xmlns="http://www.w3.org/2000/svg">
+		<ellipse cx="218" cy="208" rx="47" ry="12" fill="#D3D3D3" />
+		<ellipse cx="412" cy="208" rx="47" ry="12" fill="#D3D3D3" />
+		<circle cx="219" cy="133" r="75" fill="orange" />
+		<circle cx="413" cy="133" r="75" fill="gold" />
+		<circle cx="210" cy="113" r="31" fill="#fff" />
+		<circle cx="247" cy="113" r="31" fill="#fff" />
+		<circle cx="381" cy="113" r="31" fill="#fff" />
+		<circle cx="425" cy="113" r="31" fill="#fff" />
+		<circle cx="219" cy="113" r="6" fill="#000" />
+		<circle cx="256" cy="113" r="6" fill="#000" />
+		<circle cx="377" cy="113" r="6" fill="#000" />
+		<circle cx="420" cy="113" r="6" fill="#000" />
+		<circle cx="234" cy="144" r="9" fill="#000" />
+		<ellipse class="mouth__gold" cx="405" cy="169" rx="6" ry="13" fill="#DC143C" />
+		<ellipse class="mouth__orage" cx="223" cy="169" rx="13" ry="6" fill="#DC143C" />
+		<ellipse style="transform: rotate(15deg);" cx="147" cy="107" rx="50" ry="19" fill="#FFA500" />
+		<polygon points="163,85 165,60 191,64" fill="#FFA500" />
+		<polygon points="168,81 169,64 187,67" fill="#000" />
+		<polygon points="233,62 256,48 263,72" fill="#FFA500" />
+		<polygon points="240,61 254,53 260,70" fill="#000" />
+		<polygon points="83,146 69,128 92,122" fill="#fff" />
+</svg>
