@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>animations</title>
+	<style type="text/css">
+
+		.animation__box div {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+		}
+
+		.animation__box {
+			width: 400px;
+			height: 400px;
+			background-color: #ABB1BA;
+			margin: 10px auto;
+			position: relative;
+		}
+
+		.square {
+			background-color: yellow;
+			left: calc(50% - 15px);
+			top: calc(50% - 15px);
+			animation: box-yellow 5s linear infinite;		
+		}
+
+		@keyframes box-yellow {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				border-radius: 50%;
+				background-color: #fff;
+			}
+			
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.circle{
+			background-color: cyan;
+			top: 10px;
+			left: 10px;
+			border-radius: 50%;	
+		}
+
+		.animation__box:hover .circle {
+		
+			animation: move 5s linear infinite;
+		}
+
+		@keyframes move {
+			0% {
+				left: 10px; top: 10px;
+			}
+			25% {
+				margin-left: 10px; margin-top: 330px;
+			}
+			50% {
+				margin-left: 330px; margin-top: 330px;
+			}
+			75% {
+				margin-left: 330px; margin-top: 10px;
+			}
+			100% {
+				left: 10px; top: 10px;
+			}
+		}
+
+		.square-rot {
+			right: 80px;
+			top: 80px;
+			background-color: #1AA15F;
+		}
+		.animation__box:hover .square-rot {
+			transform-origin: 0 0;
+			animation: rott 6s linear infinite;
+		}
+
+		@keyframes rott {
+			50% {
+				background-color: red;
+			}
+  			100% {
+				transform: rotate(360deg);
+			}
+		}	
+
+		.roter {
+			background: linear-gradient(45deg, rgb(31, 114, 44), rgb(191, 22, 104));
+			bottom: 80px;
+			left: 80px;
+		}
+
+		.animation__box:hover .roter {
+			animation: rotty 5s linear infinite;
+			transform-origin: 50% 0;
+		}
+		@keyframes rotty {
+			50% {
+				transform: rotateY(180deg);
+				width: 100px;
+				height: 100px;
+			}
+			100%{
+				transform: rotateY(-360deg);
+			}
+		}
+
+		.sub.sub{
+			width: 74px;
+			height: 134px;
+			top: 100px;
+			left: 80px;
+			/*спрайт делал сам немного коряво получился*/
+			background-image: url(mysub.png);
+			background-position: 1px 0;
+			
+		}
+		.animation__box:hover .sub {
+			animation: subz 1s steps(6) infinite;
+		}
+		@keyframes subz {
+			0% {background-position: 1px 0;}
+			100% {background-position: -445px 0;}
+		}
+	</style>
+</head>
+<body>
+	<div class="animation__box">
+		<div class="square"></div>
+		<div class="circle"></div>
+		<div class="square-rot"></div>
+		<div class="roter"></div>
+		<div class="sub"></div>
+	</div>
+</body>
+</html>
