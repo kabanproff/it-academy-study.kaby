@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>knowledges</title>
+	<style type="text/css">
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #F8F8F8;
+	font-family: sans-serif;
+	color: #404040;
+	font-size: 1em;
+	padding: 0 30px;
+}
+.wrapper {
+	background-color: #fff;
+	width: 770px;
+	box-sizing: border-box;
+	box-shadow: 0 1px 1px 1px #D9D8D9;
+	height: 360px;
+	margin: 20px auto;
+}
+.progress__wrapper {
+	background-color: #fff;
+	box-sizing: border-box;
+	box-shadow: 0 1px 1px 1px #D9D8D9;
+	height: 360px;
+	margin: 20px auto;
+}
+.progress__container {
+	padding: 44px 22px 53px 25px;
+	/*outline: 1px solid #000;*/
+}
+.progress__container>div:not(.progress__title) {
+	margin-bottom: 23px;
+}
+.progress__title {
+	margin: 0px 0px 39px 0px;
+	letter-spacing: -1px;
+}
+.upper {
+	text-transform: uppercase;
+}
+.progress__row {
+	height: 17px;
+	background-color: #EEEEEE;
+	width: 100%;
+	border-radius: 15px;
+	border: 1px solid #DBDCDA;	
+	overflow: hidden;
+}
+.progress__name {
+	letter-spacing: -1px;
+	margin-bottom: 3px;
+}
+.progress__line {
+	position: relative;
+	max-width: 100%;
+	width: 2%;
+	height: 100%;
+	border-radius: 15px;
+}
+.gold {
+	background-color: #FEB64A;
+	animation: line-html 1s linear 4s forwards;
+}
+.blue {
+	background-color: #9574CE;
+	animation: line-css 1s linear 4s forwards;
+}
+.red {
+	background-color: #F2524F;
+	animation: line-js 1s linear 4s forwards;
+}
+.green {
+	background-color: #64BB69;
+	animation: line-jq 1s linear 4s forwards;
+}
+@keyframes line-html {100% {width: 75%;}}
+@keyframes line-css {100% {width: 65%;}}
+@keyframes line-js {100% {width: 55%;}}
+@keyframes line-jq {100% {width: 45%;}}
+	</style>
+</head>
+<body>
+	<div class="progress__wrapper">
+		<div class="progress__container">
+			<div class="progress__title"><h3>Мои знания:</h3></div>
+			<div class="progress__html ">
+				<p class="progress__name upper">html</p>
+				<div class="progress__row "><div class="progress__line gold"></div></div>
+			</div>
+			<div class="progress__css">
+				<p class="progress__name upper">css</p>
+				<div class="progress__row "><div class="progress__line blue"></div></div>
+			</div>
+			<div class="progress__javascript">
+				<p class="progress__name">JavaScript</p>
+				<div class="progress__row"><div class="progress__line red"></div></div>
+			</div>
+			<div class="progress__jquery">
+				<p class="progress__name">jQuery</p>
+				<div class="progress__row"><div class="progress__line green"></div></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
