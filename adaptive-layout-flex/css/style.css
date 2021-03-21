@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*outline: 1px solid #000;*/
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 100%;
+  min-width: 320px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  background-color: #00bfff;
+}
+
+.head__container, .footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo {
+  width: 110px;
+  background-color: #808080;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav, .social__ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav li, .social__ul li {
+  text-align: center;
+  position: relative;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 10px;
+}
+.btn:hover {
+  color: #ABB1BA;
+}
+
+.column__container {
+  display: flex;
+}
+
+.aside {
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 155px;
+}
+
+.aside__type1 {
+  background-color: #FFD700;
+}
+
+.main {
+  flex-shrink: 1;
+  flex-basis: 200px;
+  flex-grow: 4;
+  background-color: #00FFFF;
+  padding: 10px;
+}
+
+.aside__type2 {
+  background-color: #FF69B4;
+}
+
+.footer {
+  background-color: #90EE90;
+}
+.footer__container {
+  font-size: 11px;
+}
+.footer__container .copy p {
+  color: black;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .head__container, .footer__container {
+    flex-direction: column;
+  }
+
+  .navigation, .social {
+    min-width: 100%;
+  }
+
+  .column__container {
+    flex-wrap: wrap;
+  }
+
+  .main {
+    order: -1;
+    min-width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .nav, .social__ul {
+    flex-direction: column;
+  }
+  .nav li a, .social__ul li a {
+    border: 1px solid #2AC9FF;
+    border-bottom-color: #00B5F6;
+    margin: 0;
+  }
+  .nav li a:active, .social__ul li a:active {
+    border-top-color: #00B5F6;
+    text-shadow: 0 1px #000;
+  }
+
+  .aside {
+    min-width: 100%;
+  }
+
+  .social__ul li a {
+    border: 1px solid #A2F1A2;
+    border-bottom-color: #87E087;
+  }
+  .social__ul li a:active {
+    border-top-color: #87E087;
+    text-shadow: 0 1px #000;
+    color: black;
+  }
+}

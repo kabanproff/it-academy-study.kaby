@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*для бэк картинки*/
+.ibg{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+/*.ibg*/ img{
+	/*width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	display: none;*/
+	object-fit: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;left: 0;
+	object-position: center;
+}
+/**************************/
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.container {
+	max-width: 1130px;
+	padding: 0 auto;
+}
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;left: 0;
+	display: flex;
+	flex-direction: column;
+}
+.main-screen {
+	flex: 1 1 100%;
+	&__bg{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;left: 0;
+	}
+}
+
+
