@@ -133,7 +133,7 @@ body {
   background-color: #006699;
   color: white;
   font-size: 15px;
-  transition-duration: 0.9s;
+  transition-duration: 0.2s;
   border-radius: 2px;
 }
 .btn-callback:hover {
@@ -142,8 +142,8 @@ body {
 .btn-callback:active {
   opacity: 0.9;
   border-color: white;
-  transition-duration: 0.9s;
-  transform: translateY(5px);
+  transition-duration: 0.2s;
+  transform: translateY(1px);
 }
 .btn-callback a {
   position: absolute;
@@ -175,8 +175,8 @@ body {
 }
 .slider .slider__advertising {
   position: absolute;
-  width: 60%;
-  left: calc(50% - 60% / 2);
+  width: 75%;
+  left: calc(50% - 75% / 2);
   top: 375px;
   color: #fff;
   text-align: center;
@@ -194,6 +194,8 @@ body {
 }
 
 .slider__btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   width: 300px;
   padding: 20px;
   border-radius: 10px;
@@ -203,6 +205,10 @@ body {
   background-image: linear-gradient(to right, #002878 0%, #33d9de 50%, #6ab1d7 100%);
   animation: backgr 2s linear infinite;
   background-size: 200% 100%;
+  cursor: pointer;
+}
+.slider__btn:hover {
+  text-shadow: 0 0 5px #fff;
 }
 
 @keyframes backgr {
@@ -222,8 +228,6 @@ body {
 
 .title__h2 h2 {
   text-align: center;
-  /********* for media 768px **********************************/
-  /*font-size: calc(17px + (8 * 8 * 0.7) * ((100vw - 320px) / 940));*/
   font-size: calc(17px + 8 * (100vw / 940));
   padding: 10px 0;
 }
@@ -277,7 +281,7 @@ body {
 }
 
 .offer {
-  flex: 1 1 740px;
+  flex: 1 1 auto;
 }
 
 .offer__items {
@@ -339,34 +343,33 @@ body {
 
 /***********************************************/
 .footer {
-  flex: 0 0 120px;
+  flex: 0 0 220px;
+  font-size: 10px;
 }
 
-/*************************44444444444444444**************/
-.button4 a {
-  display: inline-block;
-  width: 100px;
-  padding: 10px 10px;
+.footer__box {
+  display: flex;
+}
+
+.copyright span {
   text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 20px;
-  background-color: #3498DB;
-  color: white;
-  font-size: 15px;
 }
 
-.button4 a:hover {
-  background-color: #2C3E50;
-  transition: 0.4s;
-  box-shadow: 0 0 5px 5px #3498DB;
-  transform: scale(1.2);
+.footer__copy {
+  flex: 0 1 200px;
 }
 
-.button4 a:active {
-  background-color: #2C3E50;
-  transition-duration: 0.4s;
-  box-shadow: none;
-  transform: scale(0.8);
+.footer__contacts p, .footer__contacts a {
+  font-size: 14px;
 }
 
-/**************555555555555555****************/
+.footer__social {
+  margin-top: 10px;
+}
+
+.footer__social-item {
+  display: inline-block;
+}
+.footer__social-item a {
+  font-size: 20px;
+}
