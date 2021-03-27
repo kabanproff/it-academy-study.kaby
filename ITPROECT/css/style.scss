@@ -64,6 +64,7 @@ body{
   	align-items: center;
 }
 .header__logo {
+
 	img{
 		width: 150%;
 	}
@@ -102,13 +103,15 @@ body{
 	color: white;
 }
 .header__phone {
+	display: flex;
+	flex-direction: column;
 
 }
 .header__beltel {}
 .header__phone-mts {}
 .header__phone-a1 {}
 .phone {
-	display: inline-block;
+	margin: 5px;
 	font-size: 12px;
 		img {
 			position: relative;
@@ -148,14 +151,40 @@ body{
 .slider {
 	flex: 0 0 500px;
 	img{
-		/*display: block;*/
+		position: relative;
 		object-fit: cover;
 		width: 100%;
 		height: 100%;
+		filter: drop-shadow(2px 3px 5px black);
+		opacity: 70%;
+	}
+	.slider__box{
+	height: 500px;
+	background-color: #000;
+}
+	.slider__advertising {
+		position: absolute;
+		width: 60%;
+		height: 250px;
+		left: calc(50% - 60% / 2);
+		top: 375px;
+		color: #fff;
+		text-align: center;
 	}
 }
-.slider__box{
-	height: 500px;
+.slider__title {
+	font-size: calc(38px + 26 * (100vw / 940));
+	margin-bottom: 20px;
+}
+.slider__text {
+	font-size: calc(14px + 9 * (100vw / 940));
+	font-weight: bold;
+}
+@media (max-width: 768px) {
+	.slider__title {
+		font-size: calc(38px + (37 * 0.7) * ((100vw - 320px) / 940));
+}
+	
 }
 /************************************************/
 .about-buy {
