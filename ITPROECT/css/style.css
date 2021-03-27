@@ -4,9 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   border: 0;
-  /*font-size: 100%;*/
   text-decoration: none;
-  /*outline: 1px solid #000;*/
+  outline: none;
 }
 
 html, body {
@@ -52,7 +51,11 @@ body {
 }
 
 .header {
-  padding: 30px 0 30px 0;
+  padding: 30px 0 0 0;
+}
+
+.header, .slider, .about-buy, .offer {
+  margin-bottom: 30px;
 }
 
 .container {
@@ -66,8 +69,15 @@ body {
   align-items: center;
 }
 
+.header__logo {
+  flex: 0 1 300px;
+}
+.header__logo a {
+  display: block;
+}
 .header__logo img {
-  width: 150%;
+  width: 100%;
+  height: 100%;
 }
 
 .header__list {
@@ -166,7 +176,6 @@ body {
 .slider .slider__advertising {
   position: absolute;
   width: 60%;
-  height: 250px;
   left: calc(50% - 60% / 2);
   top: 375px;
   color: #fff;
@@ -181,8 +190,26 @@ body {
 .slider__text {
   font-size: calc(14px + 9 * (100vw / 940));
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
+.slider__btn {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px 1px #00487B;
+  background-color: #006699;
+  color: white;
+  background-image: linear-gradient(to right, #002878 0%, #33d9de 50%, #6ab1d7 100%);
+  animation: backgr 2s linear infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes backgr {
+  100% {
+    background-position: 100% 0;
+  }
+}
 @media (max-width: 768px) {
   .slider__title {
     font-size: calc(38px + (37 * 0.7) * ((100vw - 320px) / 940));
