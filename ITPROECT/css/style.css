@@ -89,6 +89,18 @@ body {
   padding: 10px 0;
   text-align: center;
 }
+.header__link:hover {
+  box-shadow: inset 0 0 5px #006699;
+}
+.header__link:active {
+  background-color: #006699;
+  color: white;
+}
+
+.header__link_checked {
+  background-color: #006699;
+  color: white;
+}
 
 .phone {
   display: inline-block;
