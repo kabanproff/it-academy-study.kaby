@@ -55,6 +55,9 @@ body{
 	margin: 0 auto;
 
 }
+.header__menu {
+
+}
 .header__body {
 	display: flex;
   	justify-content: space-between;
@@ -68,11 +71,24 @@ body{
 .logo {}
 .header__burg {}
 .header__menu {}
-.header__list {}
-.header__list-item {
-	display: inline-block;
+
+.header__list {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-around;
 }
-.header__link {}
+.header__list-item {
+	border-right: 1px solid gray;
+	flex: 1 1 auto;
+	&:last-child {
+		border: none;
+	}
+}
+.header__link {
+	display: block;
+	padding: 10px 0;
+	text-align: center;
+}
 .header__phone {
 
 }

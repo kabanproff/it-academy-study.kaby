@@ -70,8 +70,24 @@ body {
   width: 150%;
 }
 
+.header__list {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .header__list-item {
-  display: inline-block;
+  border-right: 1px solid gray;
+  flex: 1 1 auto;
+}
+.header__list-item:last-child {
+  border: none;
+}
+
+.header__link {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .phone {
