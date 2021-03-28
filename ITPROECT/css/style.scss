@@ -368,19 +368,31 @@ body{
 }
 .reviews__item {
 	flex: 0 1 210px;
+	
 	margin: 0 2px;
 
 }
+.reviews__item-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
 .reviews__img {
-
 	img {
 		width: 100%;
 		height: 200px;
 		object-fit: cover;
 	}
 }
-.reviews__text {}
-.reviews__author {}
+.reviews__text {
+	flex: 1 1 auto;
+	margin-bottom: 10px;
+
+}
+.reviews__author {
+	font-weight: bold;
+}
 /************************************************/
 .footer {
 	margin-top: 50px;
