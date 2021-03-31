@@ -35,6 +35,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+/*****************************START********************************************/
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -44,7 +45,14 @@ body {
   width: calc(100vw - 15px);
 }
 
+.img-adapt {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .wrapper {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -164,15 +172,12 @@ body {
   padding: 8px 5px;
 }
 
-/*******************************************/
+/**********************DLIDER******************************************************/
 .slider {
   flex: 0 0 500px;
 }
 .slider img {
   position: relative;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
   filter: drop-shadow(2px 3px 5px black);
   opacity: 70%;
 }
@@ -228,13 +233,14 @@ body {
     font-size: calc(38px + (37 * 0.7) * ((100vw - 320px) / 1150));
   }
 }
-/************************************************/
+/****************************MAIN BODY ********************************************/
 .main__body {
   display: flex;
 }
 
 .catalog {
-  flex: 0 1 200px;
+  flex: 0 1 auto;
+  min-width: 200px;
   background-color: #F5F5F5;
 }
 
@@ -252,18 +258,49 @@ body {
   display: block;
   padding: 10px;
   text-decoration: none;
+  color: #3F3F3F;
+}
+.catalog__item a:hover {
+  background-color: #b7f0f0;
+}
+
+.catalog__item_active a, .catalog__item_active a:hover {
+  background-color: #006699;
+  color: white;
+}
+
+/*****************************MAIN + CONTENT*******************************************/
+.main {
+  flex: 1 1 auto;
 }
 
 .main__content {
   flex: 1 1 auto;
 }
 
-/**************************************************/
-.about-buy {
-  flex: 0 1 auto;
+/**********************RODS + PRODUCTS***************************************/
+.rods__body {
+  gap: 10px;
 }
 
-.title__h2 h2 {
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.products__item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr 40px/1fr;
+  padding: 5px;
+}
+
+.products__name {
+  padding: 0 10px;
+}
+
+/*************************ABOUT BUY***************************************************/
+.title-h2 h2 {
   text-align: center;
   font-size: calc(17px + 8 * (100vw / 1150));
   padding: 10px 0;
@@ -304,7 +341,7 @@ body {
     font-size: calc(10px + (10 * 3 * 0.7) * ((100vw - 320px) / 1150));
   }
 }
-/*****************************************************/
+/**********************OFFER ITEMS***************************************************/
 .offer__price-old span {
   position: relative;
   color: red;
@@ -336,11 +373,7 @@ body {
 
 .offer__img {
   flex: 0 0 150px;
-}
-.offer__img img {
-  object-fit: cover;
-  max-width: 150px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .offer__description {
@@ -357,7 +390,8 @@ body {
   margin-bottom: 5px;
 }
 
-.offer__btn {
+.offer__btn, .products__btn {
+  margin: 5px auto 0;
   width: 200px;
   padding: 10px;
   outline: none;
@@ -365,20 +399,20 @@ body {
   color: #fff;
   background-color: #006699;
 }
-.offer__btn:hover {
+.offer__btn:hover, .products__btn:hover {
   text-shadow: 0px 0px 5px #fff;
   background-color: #2C3E50;
   transition: 0.4s;
   box-shadow: 0 0 5px 5px #3498DB;
 }
-.offer__btn:active {
+.offer__btn:active, .products__btn:active {
   background-color: #2C3E50;
   transition-duration: 0.4s;
   box-shadow: none;
   transform: scale(0.9);
 }
 
-/***********************************************/
+/*************************REVIEWS*****************************************************/
 .reviews {
   flex: 1 1 auto;
 }
@@ -387,6 +421,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-top: 10px;
 }
 
 .reviews__item {
@@ -401,12 +436,6 @@ body {
   height: 100%;
 }
 
-.reviews__img img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
 .reviews__text {
   flex: 1 1 auto;
   margin-bottom: 10px;
@@ -416,7 +445,7 @@ body {
   font-weight: bold;
 }
 
-/************************************************/
+/***********************FOOTER***********************************************/
 .footer {
   margin-top: 50px;
   flex: 0 0 220px;
@@ -466,5 +495,3 @@ body {
 .footer__social-item a {
   font-size: 20px;
 }
-
-/*************************************************************/
