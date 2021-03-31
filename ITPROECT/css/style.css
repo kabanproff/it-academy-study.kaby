@@ -229,6 +229,36 @@ body {
   }
 }
 /************************************************/
+.main__body {
+  display: flex;
+}
+
+.catalog {
+  flex: 0 1 200px;
+  background-color: #F5F5F5;
+}
+
+.catalog__title {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.catalog_items {
+  position: sticky;
+  top: 0;
+}
+
+.catalog__item a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.main__content {
+  flex: 1 1 auto;
+}
+
+/**************************************************/
 .about-buy {
   flex: 0 1 auto;
 }
@@ -391,6 +421,8 @@ body {
   margin-top: 50px;
   flex: 0 0 220px;
   font-size: 10px;
+  background: url("../img/footer/footer-bg2.jpg") 0px 0px no-repeat;
+  background-size: cover;
 }
 
 .footer__box {
@@ -399,7 +431,7 @@ body {
   flex-wrap: wrap;
 }
 
-.copyright span {
+.upper {
   text-transform: uppercase;
 }
 
@@ -434,3 +466,5 @@ body {
 .footer__social-item a {
   font-size: 20px;
 }
+
+/*************************************************************/
