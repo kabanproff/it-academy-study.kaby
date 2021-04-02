@@ -72,11 +72,9 @@ body{
 	flex: 0 1 300px;
 	a {
 		display: block;
+
 	}
-	img{
-		width: 100%;
-		height: 100%;
-	}
+	
 }
 .logo {}
 .header__burg {}
@@ -118,17 +116,22 @@ body{
 	flex-direction: column;
 
 }
-.header__beltel {}
-.header__phone-mts {}
-.header__phone-a1 {}
+.header__beltel, .footer__beltel {
+	background-position: 0 -16px;
+}
+.header__phone-mts, .footer__phone-mts {
+	background-position: 0 0;
+}
+.header__phone-a1, .footer__phone-a1 {
+	background-position: 0 -32px;
+}
 .phone {
+	background-image: url("../img/header/phone.png");
+	background-repeat: no-repeat;
 	margin: 5px;
 	font-size: 12px;
-
-		img {
-			position: relative;
-			top: 4px;
-		}
+	padding-left: 21px;
+	line-height: 16px;
 		a {
 			color: #3F3F3F;
 			&:hover{
@@ -142,6 +145,7 @@ body{
     padding: 15px 55px;
     position: relative;
     background-color: #006699;
+    background-image: none;
     color: white;
     font-size: 15px;
     transition-duration: 0.2s;
@@ -374,6 +378,7 @@ body{
 	//*display: grid;*/
 	//*grid-template-columns: repeat(2, minmax(100px, 280px));*/
 	//*grid-template-rows: 2, auto;*/
+	flex: 1 1 320px;
 	display:flex;
 	flex-wrap: wrap;
 	padding: 10px;
@@ -453,7 +458,8 @@ body{
 }
 /***********************FOOTER***********************************************/
 .footer {
-	margin-top: 50px;
+	padding: 20px 10px;
+	color: white;
 	flex: 0 0 220px;
 	font-size: 10px;
 	background: url("../img/footer/footer-bg2.jpg") 0px 0px no-repeat;
@@ -473,6 +479,7 @@ body{
 }
 .footer__logo {
 	margin-bottom: 20px;
+	max-width: 200px;
 
 }
 .footer__on-map {
@@ -486,6 +493,7 @@ body{
 .footer__contacts {
 	p, a {
 		font-size: 14px;
+		color: white;
 	}
 }
 .footer__mail {
@@ -499,10 +507,25 @@ body{
 
 }
 .footer__social-item {
-	
+	.icon {
+		padding: 9px;
+    	border-radius: 50%;
+	}
 	display: inline-block;
 	a {
-		font-size: 20px;
+		font-size: 16px;
+	
 	}
 }
-
+.icon-facebook2:hover {
+	background-color: #555;
+}
+.icon-vk:hover {
+	background-color: #5f83aa;
+}
+.icon-instagram:hover {
+	background-color: #e54672;
+}
+.icon-youtube:hover {
+	background-color: #d62424;
+}
