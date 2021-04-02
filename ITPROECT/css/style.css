@@ -258,7 +258,7 @@ body {
   padding: 10px;
 }
 
-.catalog_items {
+.catalog__items {
   position: sticky;
   top: 0;
 }
@@ -469,6 +469,10 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.footer__columns {
+  margin-bottom: 10px;
 }
 
 .upper {
