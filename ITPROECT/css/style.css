@@ -107,7 +107,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     background-color: #fff;
   }
 
@@ -363,8 +363,11 @@ body {
 }
 
 @keyframes backgr {
+  50% {
+    background-size: 100% 100%;
+  }
   100% {
-    background-position: 100% 0;
+    background-size: 200% 100%;
   }
 }
 @media (max-width: 768px) {
@@ -705,4 +708,84 @@ body {
 
 .icon-youtube:hover {
   background-color: #d62424;
+}
+
+/****************MODAL*******************************************/
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.modal__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal__content {
+  padding: 30px 25px;
+  background-color: #fff;
+  position: relative;
+}
+.modal__content span {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 20px;
+  color: white;
+  padding: 0 6px;
+  background-color: #006699;
+  border-radius: 50%;
+}
+
+#modal__check {
+  display: none;
+}
+#modal__check:checked ~ .modal {
+  display: block;
+}
+
+.modal__title {
+  margin-bottom: 20px;
+}
+
+.modal__form input {
+  font-size: 13px;
+  padding: 9px 5px;
+  width: 100%;
+  letter-spacing: 0.3px;
+  border-radius: 5px;
+  border: 2px solid #2196f3;
+  margin-bottom: 5px;
+}
+
+.modal__textarea textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+  font-size: 15px;
+  padding: 9px 5px;
+  letter-spacing: -1px;
+  border-radius: 5px;
+  border: 2px solid #2196f3;
+}
+
+.modal__sub {
+  text-align: center;
+}
+
+.modal__btn {
+  padding: 11px 39px;
+  background-color: #006699;
+  border-radius: 5px;
+  color: white;
+  font-size: 17px;
+  margin-top: 10px;
 }

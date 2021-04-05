@@ -46,7 +46,7 @@
 						<div class="header__phone-a1 phone">
 							<a href="tel:+375292604195"><span>+375(29)</span>260-41-95</a>
 						</div>
-						<div class="btn-callback phone"><a href="#">Перезвоните мне</a></div>
+						<div class="btn-callback phone"><a href="#"><label for="modal__check">Перезвоните мне</label></a></div>
 					</div>
 					
 				</div>
@@ -58,7 +58,7 @@
 				<div class="slider__advertising">
 					<div class="slider__title">Товары для рыбалки</div>
 					<div class="slider__text">Оставьте заявку и получите промокод на 50 рублей! Акция действительна до 24 апреля — успейте стать участником и получить подарок!</div>
-					<button class="slider__btn" type="button">Оставить заявку</button>
+					<button class="slider__btn" type="button"><label for="modal__check">Оставить заявку</label></button>
 				</div>
 			</div>
 		</div>
@@ -318,6 +318,35 @@
 				</div>
 			</div>
 		</footer>
+	</div>
+	<input type="checkbox" name="modal__check" id="modal__check">
+	<div class="modal">
+		<div class="modal__box">
+			<div class="modal__content">
+				
+				<label for="modal__check">
+					<span>X</span>
+				</label>
+				<h2 class="modal__title title-h2">Введите Ваши данные</h2>
+				<form action="#" method="POST" class="modal__form">
+					<div class="modal__name">
+						<input type="text" name="name" placeholder="Введите ваше Имя">
+					</div>
+					<div class="modal__phone">
+						<input type="tel" name="tel" placeholder="Ваш телефон">
+					</div>
+					<div class="modal__mail">
+						<input type="text" name="mail" placeholder="Ваша почта">
+					</div>
+					<div class="modal__textarea">
+						<textarea  type="text" placeholder="Текст сообщения..."></textarea>
+				</div>
+					<div class="modal__sub">
+						<button class="modal__btn">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./js/script-project.js"></script>
