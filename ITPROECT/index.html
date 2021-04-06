@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style-icomoon.css">
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<title>РЫБАЧЁК</title>
 </head>
 <body>
@@ -46,7 +47,7 @@
 						<div class="header__phone-a1 phone">
 							<a href="tel:+375292604195"><span>+375(29)</span>260-41-95</a>
 						</div>
-						<div class="btn-callback phone"><a href="#"><label for="modal__check">Перезвоните мне</label></a></div>
+						<div class="btn-callback btn"><label for="modal__check1"><p>Перезвоните мне</p></label></div>
 					</div>
 					
 				</div>
@@ -58,7 +59,7 @@
 				<div class="slider__advertising">
 					<div class="slider__title">Товары для рыбалки</div>
 					<div class="slider__text">Оставьте заявку и получите промокод на 50 рублей! Акция действительна до 24 апреля — успейте стать участником и получить подарок!</div>
-					<button class="slider__btn" type="button"><label for="modal__check">Оставить заявку</label></button>
+					<div class="slider__btn btn"><label for="modal__check2"><p>Оставить заявку</p></label></div>
 				</div>
 			</div>
 		</div>
@@ -319,27 +320,23 @@
 			</div>
 		</footer>
 	</div>
-	<input type="checkbox" name="modal__check" id="modal__check">
-	<div class="modal">
+	<input type="checkbox" name="modal__check1" id="modal__check1">
+	<div class="modal1">
 		<div class="modal__box">
 			<div class="modal__content">
-				
-				<label for="modal__check">
+				<label for="modal__check1">
 					<span>X</span>
 				</label>
 				<h2 class="modal__title title-h2">Введите Ваши данные</h2>
 				<form action="#" method="POST" class="modal__form">
 					<div class="modal__name">
-						<input type="text" name="name" placeholder="Введите ваше Имя">
+						<input type="text" name="name" placeholder="Введите ваше Имя" maxlength="25">
 					</div>
 					<div class="modal__phone">
-						<input type="tel" name="tel" placeholder="Ваш телефон">
-					</div>
-					<div class="modal__mail">
-						<input type="text" name="mail" placeholder="Ваша почта">
+						<input type="tel" name="tel" placeholder="Ваш телефон" maxlength="25">
 					</div>
 					<div class="modal__textarea">
-						<textarea  type="text" placeholder="Текст сообщения..."></textarea>
+						<textarea placeholder="Какие-то пожелания..."></textarea>
 				</div>
 					<div class="modal__sub">
 						<button class="modal__btn">Отправить</button>
@@ -348,8 +345,35 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="./js/script-project.js"></script>
+	<input type="checkbox" name="modal__check2" id="modal__check2">
+	<div class="modal2">
+		<div class="modal__box">
+			<div class="modal__content">
+				<label for="modal__check2">
+					<span>X</span>
+				</label>
+				<h2 class="modal__title title-h2">Введите Ваши данные</h2>
+				<form action="#" method="POST" class="modal__form">
+					<div class="modal__name">
+						<input type="text" name="name" placeholder="Введите ваше Имя" maxlength="25">
+					</div>
+					<div class="modal__phone">
+						<input type="tel" name="tel" placeholder="Ваш телефон" maxlength="25">
+					</div>
+					<div class="modal__mail">
+						<input type="text" name="mail" placeholder="Ваша почта" maxlength="45">
+					</div>
+					<div class="modal__textarea">
+						<textarea placeholder="Какие-то пожелания..."></textarea>
+					</div>
+					<div class="modal__sub">
+						<button class="modal__btn">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/script-project.js"></script>
 	<script type="text/javascript" src="js/dynamicAdapt.js"></script>
 </body>
 </html>

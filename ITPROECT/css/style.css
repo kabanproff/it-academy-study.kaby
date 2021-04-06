@@ -125,9 +125,8 @@ body {
 
   .header__menu.active {
     display: block;
-    margin-top: 122px;
+    margin-top: 116px;
     top: 0;
-    transition: all 0.3s ease 0s;
   }
 
   .header__burg {
@@ -180,7 +179,7 @@ body {
     transform: scale(0);
   }
 
-  .header__menu, .header__on-map {
+  .header__on-map {
     display: none;
   }
 
@@ -251,7 +250,7 @@ body {
 
 @media (max-width: 480px) {
   .header__menu.active {
-    margin-top: 45px;
+    margin-top: 47px;
   }
 
   .phone:not(:last-child) {
@@ -277,16 +276,21 @@ body {
   text-shadow: 0 0 5px;
 }
 
-.btn-callback {
-  width: 100px;
-  padding: 15px 55px;
-  position: relative;
+.btn {
+  width: 100%;
   background-color: #006699;
-  background-image: none;
+  border-radius: 7px;
+}
+.btn p {
+  padding: 10px 7px;
   color: white;
-  font-size: 15px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-callback {
   transition-duration: 0.2s;
-  border-radius: 2px;
 }
 .btn-callback:hover {
   opacity: 0.7;
@@ -297,18 +301,12 @@ body {
   transition-duration: 0.2s;
   transform: translateY(1px);
 }
-.btn-callback a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 10px;
-  color: white;
-  text-align: center;
-  padding: 8px 5px;
-}
 
+@media (max-width: 480px) {
+  .btn-callback {
+    margin-top: 8px;
+  }
+}
 /**********************SLIDER******************************************************/
 .slider {
   flex: 0 0 auto;
@@ -317,6 +315,7 @@ body {
   filter: drop-shadow(0px 0px 3px black);
   opacity: 70%;
   min-height: 300px;
+  display: block;
 }
 
 .slider__box {
@@ -345,10 +344,10 @@ body {
 }
 
 .slider__btn {
+  margin: 0 auto;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   width: calc(227px + (73 * 0.7) * 100vw / 1150);
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 1px 1px 1px #00487B;
   background-color: #006699;
@@ -360,6 +359,10 @@ body {
 }
 .slider__btn:hover {
   text-shadow: 0 0 5px #fff;
+}
+.slider__btn p {
+  padding: 18px 10px;
+  font-size: 18px;
 }
 
 @keyframes backgr {
@@ -388,8 +391,8 @@ body {
     font-size: 16px;
   }
 
-  .slider__btn {
-    padding: 10px;
+  .slider__btn p {
+    padding: 17px;
   }
 }
 @media (max-width: 480px) {
@@ -408,10 +411,6 @@ body {
 
   .slider__text {
     font-size: 13px;
-  }
-
-  .slider__btn {
-    padding: 10px;
   }
 }
 /****************************MAIN BODY ********************************************/
@@ -711,7 +710,7 @@ body {
 }
 
 /****************MODAL*******************************************/
-.modal {
+.modal1, .modal2 {
   display: none;
   position: fixed;
   left: 0;
@@ -745,10 +744,17 @@ body {
   border-radius: 50%;
 }
 
-#modal__check {
+#modal__check1 {
   display: none;
 }
-#modal__check:checked ~ .modal {
+#modal__check1:checked ~ .modal1 {
+  display: block;
+}
+
+#modal__check2 {
+  display: none;
+}
+#modal__check2:checked ~ .modal2 {
   display: block;
 }
 
