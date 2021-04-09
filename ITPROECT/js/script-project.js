@@ -3,16 +3,13 @@ $(document).ready(function() {
     $('.header__burg,.header__menu').toggleClass('active');
     $('body').toggleClass('lock');
   });
-});
 
-//let prevScrollpos = window.pageYOffset;
-//window.onscroll = function () {
-//  let currentScrollPos = window.pageYOffset;
-//  if (prevScrollpos > currentScrollPos) {
-//    document.querySelector("header").style.visibility = "visible";
-//  } else {
-//    document.querySelector("header").style.top = "-70px";
-//    document.querySelector("header").style.visibility = "hidden";
-//  }
-//  prevScrollpos = currentScrollPos;
-//}; 
+  $('.slider__box').slick({
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+  infinite: true,
+  speed: 1500,
+  fade: true,
+  });
+});

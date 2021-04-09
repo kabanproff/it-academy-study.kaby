@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 * {
   margin: 0;
@@ -310,19 +311,46 @@ body {
 /**********************SLIDER******************************************************/
 .slider {
   flex: 0 0 auto;
-}
-.slider img {
-  filter: drop-shadow(0px 0px 3px black);
-  opacity: 70%;
-  min-height: 300px;
-  display: block;
+  position: relative;
 }
 
 .slider__box {
   background-color: #000;
   position: relative;
+  z-index: 1;
 }
 
+.item img {
+  opacity: 60%;
+  min-height: 300px;
+  display: block;
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
 .slider__advertising {
   position: absolute;
   width: 75%;
@@ -330,6 +358,7 @@ body {
   top: 27%;
   color: #fff;
   text-align: center;
+  z-index: 1;
 }
 
 .slider__title {
