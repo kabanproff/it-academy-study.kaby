@@ -466,7 +466,6 @@ body {
 @media (max-width: 768px) {
   .catalog {
     text-align: center;
-    height: 100%;
   }
 }
 .catalog__title {
