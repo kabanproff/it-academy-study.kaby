@@ -312,7 +312,6 @@ body {
 /**********************SLIDER******************************************************/
 .slider {
   flex: 0 0 auto;
-  position: relative;
 }
 
 .slider__box {
