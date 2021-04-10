@@ -238,15 +238,15 @@ body {
   flex-direction: column;
 }
 
-.header__beltel, .footer__beltel {
+.beltel {
   background-position: 0 -16px;
 }
 
-.header__phone-mts, .footer__phone-mts {
+.phone-mts {
   background-position: 0 0;
 }
 
-.header__phone-a1, .footer__phone-a1 {
+.phone-a1 {
   background-position: 0 -32px;
 }
 
@@ -511,11 +511,15 @@ body {
 .search__input a {
   flex: 0 0 30px;
   padding: 8px;
+  text-align: center;
 }
 
 .filter__item {
   position: relative;
   line-height: 35px;
+}
+.filter__item span {
+  cursor: pointer;
 }
 .filter__item span:nth-child(1) {
   font-size: 13px;
@@ -757,6 +761,7 @@ body {
 
 .footer__columns {
   margin-bottom: 10px;
+  flex: 0 1 33.333%;
 }
 
 .upper {
@@ -777,6 +782,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .footer__box {
+    flex-direction: column;
+  }
+
   .footer__on-map {
     font-size: calc(12px + (8 * 0.7) * ((100vw - 320px) / 1150));
   }
@@ -786,18 +795,18 @@ body {
   color: white;
 }
 
-.footer__social {
+.social {
   margin-top: 10px;
 }
 
-.footer__social-item {
+.social-item {
   display: inline-block;
 }
-.footer__social-item .icon {
+.social-item .icon {
   padding: 9px;
   border-radius: 50%;
 }
-.footer__social-item a {
+.social-item a {
   font-size: 16px;
 }
 
@@ -850,6 +859,7 @@ body {
   padding: 0 6px;
   background-color: #006699;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #modal__check1 {
@@ -902,4 +912,5 @@ body {
   color: white;
   font-size: 17px;
   margin-top: 10px;
+  cursor: pointer;
 }

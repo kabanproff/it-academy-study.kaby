@@ -68,9 +68,13 @@ var em;
 //Области видимости
 function testBlockLet() {
 	let myAgeLet = 22;
+	var myNewLet = 32;
 	console.log(myAgeLet);
+	console.log(myNewLet);
 }
 testBlockLet();
 
 //Переменная НЕ видна за пределами бллока
+
+console.log(myNewLet);
 console.log(myAgeLet);
