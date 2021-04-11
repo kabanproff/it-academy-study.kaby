@@ -547,30 +547,12 @@ body{
 .main__content {
 	flex: 1 1 auto;
 }
-.contacts__content{}
-.contacts {}
-.beltel {}
-.phone {}
-.phone-mts {}
-.phone-a1 {}
-.our__mail {}
-.social {}
-.social-list {}
-.social-item {}
-.icon-facebook2 {}
-.icon {}
-.icon-vk {}
-.icon-instagram {}
-.icon-youtube {}
-/**********************RODS + PRODUCTS***************************************/
-.rods {}
-.rods__title {}
-.rods__body {
-	gap: 10px;
-}
+
+/**********************PRODUCTS***************************************/
 .products {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 10px;
 }
 .products__item {
 	display: grid;
@@ -578,9 +560,7 @@ body{
 	grid-template: auto 1fr 40px / 1fr;
 	padding: 5px;
 }
-.products__img {
-	
-}
+.products__img {}
 .products__name {
 	padding: 0 10px;
 }
@@ -654,43 +634,41 @@ body{
 .offer {
 	flex: 1 1 auto;
 }
+
 .offer__items{
-	//*display: grid;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	//*grid-template-columns: repeat(auto-fit, 370px);*/
-	//*grid-template-rows: auto;*/
-
 }
+
 .offer__item {
-	//*display: grid;*/
-	//*grid-template-columns: repeat(2, minmax(100px, 280px));*/
-	//*grid-template-rows: 2, auto;*/
 	flex: 1 1 320px;
 	display:flex;
 	flex-wrap: wrap;
 	padding: 10px;
 	justify-content: center;
 }
+
 .offer__img {
 	flex: 0 0 150px;
 	margin: 5px;
 }
+
 .offer__description {
 	text-align: center;
 	flex: 1 1 200px;
 	max-width: 250px;
-
 	&>div {
 		margin-bottom: 15px;
 	}
 }
+
 .offer__rating {
 	font-size: 18px;
 	margin-bottom: 5px;
 }
-.offer__btn, .products__btn {
+/*************************item-button**********************/
+.item-btn {
 	margin: 5px auto 0;
 	width: 200px;
 	padding: 10px;
@@ -725,10 +703,8 @@ body{
 	margin-top: 10px;
 }
 .reviews__item {
-	flex: 0 1 210px;
-	
+	flex: 0 1 210px;	
 	margin: 0 2px;
-
 }
 .reviews__item-box {
 	display: flex;
@@ -740,7 +716,6 @@ body{
 .reviews__text {
 	flex: 1 1 auto;
 	margin-bottom: 10px;
-
 }
 .reviews__author {
 	font-weight: bold;
@@ -766,7 +741,6 @@ body{
 .upper {
 	text-transform: uppercase;
 }
-
 .footer__copy {
 	flex: 0 1 33.333%;
 }
@@ -787,7 +761,6 @@ body{
 	.footer__on-map {
 		font-size: calc(12px + (8 * 0.7) * ((100vw - 320px) / 1150));
 	}
-
 }
 .footer__contacts {
 	p, a {
@@ -795,12 +768,9 @@ body{
 		color: white;
 	}
 }
-.our__mail {
-	
-}
+.our__mail {}
 .social {
 	margin-top: 10px;
-
 }
 .social-list {
 
@@ -813,7 +783,6 @@ body{
 	display: inline-block;
 	a {
 		font-size: 16px;
-	
 	}
 }
 .icon-facebook2:hover {
@@ -844,8 +813,6 @@ body{
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	
-
 }
 .modal__content {
 	padding: 30px 25px;
@@ -890,9 +857,7 @@ body{
    		margin-bottom: 5px;
 	}
 }
-.modal__name {
-
-}
+.modal__name {}
 .modal__phone {}
 .modal__mail {}
 .modal__textarea {

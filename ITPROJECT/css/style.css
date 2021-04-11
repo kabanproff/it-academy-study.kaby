@@ -575,14 +575,11 @@ body {
   flex: 1 1 auto;
 }
 
-/**********************RODS + PRODUCTS***************************************/
-.rods__body {
-  gap: 10px;
-}
-
+/**********************PRODUCTS***************************************/
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
 }
 
 .products__item {
@@ -688,7 +685,8 @@ body {
   margin-bottom: 5px;
 }
 
-.offer__btn, .products__btn {
+/*************************item-button**********************/
+.item-btn {
   margin: 5px auto 0;
   width: 200px;
   padding: 10px;
@@ -697,13 +695,13 @@ body {
   color: #fff;
   background-color: #006699;
 }
-.offer__btn:hover, .products__btn:hover {
+.item-btn:hover {
   text-shadow: 0px 0px 5px #fff;
   background-color: #2C3E50;
   transition: 0.4s;
   box-shadow: 0 0 5px 5px #3498DB;
 }
-.offer__btn:active, .products__btn:active {
+.item-btn:active {
   background-color: #2C3E50;
   transition-duration: 0.4s;
   box-shadow: none;
