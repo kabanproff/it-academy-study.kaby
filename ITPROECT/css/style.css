@@ -312,10 +312,12 @@ body {
 /**********************SLIDER******************************************************/
 .slider {
   flex: 0 0 auto;
+  position: relative;
 }
 
 .slider__box {
   background-color: #000;
+  position: relative;
   z-index: 1;
 }
 
