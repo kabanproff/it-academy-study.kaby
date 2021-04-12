@@ -205,31 +205,31 @@ body{
 	background-color: #006699;
 	color: white;
 }
-.header__phone {
+.header__contacts {
 	display: flex;
 	flex-direction: column;
 	}
-.beltel {
+.contacts-tel__item_beltel {
 	background-position: 0 -16px;
 }
-.phone-mts {
+.contacts-tel__item_mts {
 	background-position: 0 0;
 }
-.phone-a1 {
+.contacts-tel__item_a1 {
 	background-position: 0 -32px;
 }
 @media (max-width: 480px){
 	.header__menu.active {
 		margin-top: 47px;
 	}
-	.phone:not(:last-child){
+	.contacts-tel__item {
 		display: none;
 	}
 	.header__body {
 		min-width: 115px;
 	}
 }
-.phone {
+.contacts-tel__item {
 	background-image: url("../img/header/phone.png");
 	background-repeat: no-repeat;
 	margin: 5px;
@@ -292,14 +292,6 @@ body{
 
 	}
 }
-
-/* Слайдер */
-.slick-slider{}
-/* Слайдер запущен */
-.slick-slider.slick-initialized{}
-/* Слайдер с точками */
-.slick-slider.slick-dotted{}
-/* Ограничивающая оболочка */
 .slick-list {
 	overflow: hidden;
 }
@@ -307,31 +299,6 @@ body{
 .slick-track{
 	display: flex;
 }
-/* Слайд */
-.slick-slide{}
-/* Слайд активный (показывается) */
-.slick-slide.slick-active{}
-/* Слайд основной */
-.slick-slide.slick-current{}
-/* Слайд по центру */
-.slick-slide.slick-center{}
-/* Клонированный слайд */
-.slick-slide.slick-cloned{}
-/* Стрелка */
-.slick-arrow{}
-/* Стрелка влево */
-.slick-arrow.slick-prev{}
-/* Стрелка вправо */
-.slick-arrow.slick-next{}
-/* Стрелка не активная */
-.slick-arrow.slick-disabled{}
-/* Точки (булиты) */
-.slick-dots{}
-.slick-dots li{}
-/* Активная точка */
-.slick-dots li.slick-active{}
-/* Элемент точки */
-.slick-dots li button{}
 
 .slider__advertising{
 	position: absolute;
@@ -557,26 +524,30 @@ body{
 	margin-bottom: 20px;
 }
 .contacts__body {
-	div {
+	div, ul {
 		margin-bottom: 10px;
 	}
 	h3{
 		margin-bottom: 10px;
 	}
+	a {
+		color: inherit;
+	}
 }
-.beltel {}
-.phone {}
-.phone-mts {}
-.phone-a1 {}
-.our__mail {}
+.contacts-items{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	p {
+		font-size: 15px;
+		font-weight: bold;
+	}
+}
+.contacts__mail {
+
+}
+.contacts__social {}
 .social {}
-.social-list {}
-.social-item {}
-.icon-facebook2 {}
-.icon {}
-.icon-vk {}
-.icon-instagram {}
-.icon-youtube {}
 .map_box {}
 /**********************PRODUCTS***************************************/
 .products {
@@ -815,13 +786,10 @@ body{
 		color: white;
 	}
 }
-.our__mail {}
 .social {
 	margin-top: 10px;
 }
-.social-list {
-
-}
+.social-list {}
 .social-item {
 	.icon {
 		padding: 9px;

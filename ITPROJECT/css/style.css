@@ -234,20 +234,20 @@ body {
   color: white;
 }
 
-.header__phone {
+.header__contacts {
   display: flex;
   flex-direction: column;
 }
 
-.beltel {
+.contacts-tel__item_beltel {
   background-position: 0 -16px;
 }
 
-.phone-mts {
+.contacts-tel__item_mts {
   background-position: 0 0;
 }
 
-.phone-a1 {
+.contacts-tel__item_a1 {
   background-position: 0 -32px;
 }
 
@@ -256,7 +256,7 @@ body {
     margin-top: 47px;
   }
 
-  .phone:not(:last-child) {
+  .contacts-tel__item {
     display: none;
   }
 
@@ -264,7 +264,7 @@ body {
     min-width: 115px;
   }
 }
-.phone {
+.contacts-tel__item {
   background-image: url("../img/header/phone.png");
   background-repeat: no-repeat;
   margin: 5px;
@@ -272,10 +272,10 @@ body {
   padding-left: 21px;
   line-height: 16px;
 }
-.phone a {
+.contacts-tel__item a {
   color: #3F3F3F;
 }
-.phone a:hover {
+.contacts-tel__item a:hover {
   text-shadow: 0 0 5px;
 }
 
@@ -328,10 +328,6 @@ body {
   display: block;
 }
 
-/* Слайдер */
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
 }
@@ -341,18 +337,6 @@ body {
   display: flex;
 }
 
-/* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
-/* Стрелка */
-/* Стрелка влево */
-/* Стрелка вправо */
-/* Стрелка не активная */
-/* Точки (булиты) */
-/* Активная точка */
-/* Элемент точки */
 .slider__advertising {
   position: absolute;
   width: 75%;
@@ -585,11 +569,24 @@ body {
   margin-bottom: 20px;
 }
 
-.contacts__body div {
+.contacts__body div, .contacts__body ul {
   margin-bottom: 10px;
 }
 .contacts__body h3 {
   margin-bottom: 10px;
+}
+.contacts__body a {
+  color: inherit;
+}
+
+.contacts-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contacts-items p {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 /**********************PRODUCTS***************************************/
