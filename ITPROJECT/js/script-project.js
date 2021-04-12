@@ -13,3 +13,20 @@ $(document).ready(function() {
   fade: true,
   });
 });
+
+(function($) {
+  $(function() {
+    $("ul.tabs__list").on("click", "li:not(.act)", function() {
+      $(this)
+        .addClass("act")
+        .siblings()
+        .removeClass("act")
+        .closest("div.product__tabs")
+        .find("div.tabs__content")
+        .removeClass("act")
+        .eq($(this).index())
+        .addClass("act");
+    });
+  });
+})(jQuery);
+

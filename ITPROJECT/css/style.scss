@@ -23,7 +23,6 @@ ol, ul {
 }
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -240,6 +239,7 @@ body{
 			color: #3F3F3F;
 			&:hover{
 				text-shadow: 0 0 5px;
+				color: #006699;
 			}
 		}
 }
@@ -544,7 +544,10 @@ body{
 	}
 }
 .contacts__mail {
-
+	a:hover {
+		text-shadow: 0 0 5px;
+		color: #006699;
+	}
 }
 .contacts__social {}
 .social {}
@@ -582,7 +585,110 @@ body{
 		color: #006699;
 	}
 }
-
+.product {
+	padding: 10px;
+}
+.product__title {}
+.title-h2 {}
+.product__body {}
+.product__wrap {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 10px;
+}
+.product__image {
+	flex: 0 1 450px;
+	min-width: 230px;
+	border: 1px solid #006699;
+    padding: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px;
+}
+.product__content {
+	flex: 1 1 auto;
+	padding: 10px;
+	text-align: center;
+}
+.review {
+	min-width: 300px;
+	text-align: center;
+	margin-bottom: 20px;
+	a {
+		padding: 0 10px;
+	}
+	a:last-child {
+		border-left: 1px solid #555;
+		display: inline-block;
+	}
+}
+.description__row{
+	display: flex;
+	justify-content: space-around;
+}
+.description__column {
+	p, a {
+		line-height: 30px;
+	}
+}
+.product__price {
+	font-size: 50px;
+	font-weight: bold;
+	margin: 20px auto;
+}
+.product__tabs {
+	margin-bottom: 20px;
+}
+.tabs__items {}
+.tabs__list {
+	display: flex;
+	li {
+		padding: 10px 15px;
+		background-color: #F3F3F3;
+		border: 1px solid #62B7D8;
+		border-bottom: none;
+		flex: 0 1 33.3333%;
+		position: relative;
+	}
+	li:first-child {
+		border-top-left-radius: 5px;
+		border-right: none;
+	}
+	li:last-child {
+		border-top-right-radius: 5px;
+		border-left: none;
+	}
+	li:not(.act) {
+  		cursor: pointer;
+	}
+	.act:after {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		right: 0;
+		height: 5px;
+		background: #F3F3F3;
+	}
+}
+.tabs__body {}
+.tabs__content {
+	display: none;
+	background-color: #F3F3F3;
+	padding: 10px;
+	border: 1px solid #62B7D8;
+	border-radius: 0 0 5px 5px;
+	table {
+		width: 100%;
+	}
+}
+.act {
+		display: block;
+	}
+@media (max-width: 768px) {
+	.product__wrap {
+		flex-wrap: wrap;
+	}
+}
 /*************************ABOUT BUY***************************************************/
 .about-buy {
 }	
