@@ -12,15 +12,15 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__burg"><span></span></div>
-				<div class="header__menu">
+				<nav class="header__menu">
 						<ul class="header__list">
 							<li class="header__list-item"><a href="./index.html" class="header__link header__link_checked">Главная</a></li>
 							<li class="header__list-item"><a href="./category/category.html" class="header__link">Каталог</a></li>
 							<li class="header__list-item"><a href="./contacts/contacts.html#category" class="header__link">Контакты</a></li>
 						</ul>
-				</div>
+				</nav>
 				<div class="header__body">
-					<div data-da='.container,768,2' class="header__logo">
+					<div data-da='.container,768,2' class="header__logo logo">
 						<a href="./index.html">	
 							<object data="./img/header/log.svg" type="image/svg+xml"></object>
 						</a>	
@@ -77,13 +77,15 @@
 								<div class="catalog__title">
 									<p>Категории</p>
 								</div>
-								<ul class="catalog__list">
-									<li class="catalog__item"><a href="./category/rods/rods.html#category">Удилища</a></li>
-									<li class="catalog__item"><a href="./category/baits/baits.html#category">Приманки</a></li>
-									<li class="catalog__item"><a href="./category/reels/reels.html#category">Катушки</a></li>
-									<li class="catalog__item"><a href="./category/supplies/supplies.html#category">Принадлежности</a></li>
-									<li class="catalog__item"><a href="./category/winter/winter.html#category">Зимняя ловля</a></li>
-								</ul>
+								<nav>
+									<ul class="catalog__list">
+										<li class="catalog__item"><a href="./category/rods/rods.html#category">Удилища</a></li>
+										<li class="catalog__item"><a href="./category/baits/baits.html#category">Приманки</a></li>
+										<li class="catalog__item"><a href="./category/reels/reels.html#category">Катушки</a></li>
+										<li class="catalog__item"><a href="./category/supplies/supplies.html#category">Принадлежности</a></li>
+										<li class="catalog__item"><a href="./category/winter/winter.html#category">Зимняя ловля</a></li>
+									</ul>
+								</nav>
 							</div>
 							<div class="search__items">
 								<p>Поиск товара</p>
@@ -179,7 +181,7 @@
 								<h2>Специальное предложение!</h2>
 							</div>
 							<div class="offer__items">
-								<div class="offer__item">
+								<div class="offer__item hover-item">
 									<div class="offer__img">
 										<img class="img-adapt" src="img/offer/offer-img1.jpg" alt="Спиннинг для твичинга Surf Master Twitch Master H, тест 14-42 гр. ">
 									</div>
@@ -191,15 +193,15 @@
 											Спиннинг для твичинга Surf Master Twitch Master H, тест 14-42 гр. 
 										</div>
 										<div class="offer__price-old">
-											<span>2200 руб.</span>
+											<span>80 руб.</span>
 										</div>
 										<div class="offer__price-new">
-											1800 руб.
+											70 руб.
 										</div>
 										<button type="submit" class="offer__btn item-btn">Заказать</button>
 									</div>
 								</div>
-								<div class="offer__item">
+								<div class="offer__item hover-item">
 									<div class="offer__img">
 										<img class="img-adapt" src="img/offer/offer-img2.jpg" alt="Спиннинг для твичинга Surf Master Twitch Master MH, тест 10,5-28 гр.">
 									</div>
@@ -211,15 +213,15 @@
 											Спиннинг для твичинга Surf Master Twitch Master MH, тест 10,5-28 гр. 
 										</div>
 										<div class="offer__price-old">
-											<span>2500 руб.</span>
+											<span>90 руб.</span>
 										</div>
 										<div class="offer__price-new">
-											2000 руб.
+											80 руб.
 										</div>
 										<button type="submit" class="offer__btn item-btn">Заказать</button>
 									</div>
 								</div>
-								<div class="offer__item">
+								<div class="offer__item hover-item">
 									<div class="offer__img">
 										<img class="img-adapt" src="img/offer/offer-img3.jpg" alt="Спиннинг Akara Trout EL Sport UL (0,5-4,5) с разнесенной ручкой">
 									</div>
@@ -231,15 +233,15 @@
 											Спиннинг Akara Trout EL Sport UL &lpar;0,5-4,5&rpar; с разнесенной ручкой 
 										</div>
 										<div class="offer__price-old">
-											<span>1800 руб.</span>
+											<span>60 руб.</span>
 										</div>
 										<div class="offer__price-new">
-											1500 руб.
+											50 руб.
 										</div>
 										<button type="submit" class="offer__btn item-btn">Заказать</button>
 									</div>
 								</div>
-								<div class="offer__item">
+								<div class="offer__item hover-item">
 									<div class="offer__img">
 										<img class="img-adapt" src="img/offer/offer-img4.jpg" alt="Спиннинг Surf Master Chokai Series Sensitive Light UL (0,8-7)">
 									</div>
@@ -251,10 +253,10 @@
 											Спиннинг Surf Master Chokai Series Sensitive Light UL &lpar;0,8-7&rpar;
 										</div>
 										<div class="offer__price-old">
-											<span>2800 руб.</span>
+											<span>150 руб.</span>
 										</div>
 										<div class="offer__price-new">
-											2200 руб.
+											130 руб.
 										</div>
 										<button type="submit" class="offer__btn item-btn">Заказать</button>
 									</div>
@@ -316,7 +318,7 @@
 			<div class="container">
 				<div class="footer__box">
 					<div class="footer__copy footer__columns">
-						<div class="footer__logo">
+						<div class="footer__logo logo">
 							<a href="./index.html">
 								<object data="./img/header/log.svg" type="image/svg+xml"></object>
 							</a>	

@@ -43,6 +43,7 @@ body{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: all 1s ease-out;
 }
 .wrapper {
 	min-height: 100%;
@@ -71,7 +72,7 @@ body{
 	margin: 0 20px;
 	text-align: center;
 }
-.header__logo, .footer__logo {
+.logo {
 	a {
 		display: block;
 		height: 100%;
@@ -540,6 +541,7 @@ body{
     width: 50%;
 	}
 }
+
 /*****************************MAIN + CONTENT*******************************************/
 .main {
 	flex: 1 1 auto;
@@ -547,7 +549,35 @@ body{
 .main__content {
 	flex: 1 1 auto;
 }
-
+/*************************CONTACTS*****************************************/
+.contacts__content {
+	padding: 0 15px 15px;
+}
+.contacts__title {
+	margin-bottom: 20px;
+}
+.contacts__body {
+	div {
+		margin-bottom: 10px;
+	}
+	h3{
+		margin-bottom: 10px;
+	}
+}
+.beltel {}
+.phone {}
+.phone-mts {}
+.phone-a1 {}
+.our__mail {}
+.social {}
+.social-list {}
+.social-item {}
+.icon-facebook2 {}
+.icon {}
+.icon-vk {}
+.icon-instagram {}
+.icon-youtube {}
+.map_box {}
 /**********************PRODUCTS***************************************/
 .products {
 	display: grid;
@@ -559,10 +589,27 @@ body{
 	grid-auto-flow: row;
 	grid-template: auto 1fr 40px / 1fr;
 	padding: 5px;
+	a:nth-child(2), p{
+		padding: 0 10px;
+	}
+	p{
+		text-align: center;
+		font-size: 17px;
+		font-weight: bold;
+		align-self: center;
+	}
 }
-.products__img {}
+.hover-item:hover img {
+        transform: scale(1.1);
+    }
+.products__img {
+	overflow: hidden;
+}
 .products__name {
-	padding: 0 10px;
+	color: #3F3F3F;
+	&:hover{
+		color: #006699;
+	}
 }
 
 /*************************ABOUT BUY***************************************************/

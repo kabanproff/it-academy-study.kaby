@@ -50,6 +50,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 1s ease-out;
 }
 
 .wrapper {
@@ -83,15 +84,15 @@ body {
   text-align: center;
 }
 
-.header__logo a, .footer__logo a {
+.logo a {
   display: block;
   height: 100%;
 }
-.header__logo object, .footer__logo object {
+.logo object {
   pointer-events: none;
 }
 @media (max-width: 480px) {
-  .header__logo object, .footer__logo object {
+  .logo object {
     height: 35px;
   }
 }
@@ -575,6 +576,22 @@ body {
   flex: 1 1 auto;
 }
 
+/*************************CONTACTS*****************************************/
+.contacts__content {
+  padding: 0 15px 15px;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+}
+
+.contacts__body div {
+  margin-bottom: 10px;
+}
+.contacts__body h3 {
+  margin-bottom: 10px;
+}
+
 /**********************PRODUCTS***************************************/
 .products {
   display: grid;
@@ -588,9 +605,29 @@ body {
   grid-template: auto 1fr 40px/1fr;
   padding: 5px;
 }
+.products__item a:nth-child(2), .products__item p {
+  padding: 0 10px;
+}
+.products__item p {
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.hover-item:hover img {
+  transform: scale(1.1);
+}
+
+.products__img {
+  overflow: hidden;
+}
 
 .products__name {
-  padding: 0 10px;
+  color: #3F3F3F;
+}
+.products__name:hover {
+  color: #006699;
 }
 
 /*************************ABOUT BUY***************************************************/
