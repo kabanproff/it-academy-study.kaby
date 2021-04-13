@@ -24,6 +24,9 @@ ol, ul {
 table {
 	border-collapse: collapse;
 }
+textarea {
+	resize: vertical;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -221,7 +224,7 @@ body{
 	.header__menu.active {
 		margin-top: 47px;
 	}
-	.contacts-tel__item {
+	.header__contacts-phones .contacts-tel__item {
 		display: none;
 	}
 	.header__body {
@@ -424,6 +427,9 @@ body{
 		&:hover {
 			background-color: #b7f0f0;
 		}
+		&:active {
+			box-shadow: inset 0 0 5px #006699;
+		}
 	}
 }
 .catalog__item_active  {
@@ -515,6 +521,7 @@ body{
 }
 .main__content {
 	flex: 1 1 auto;
+	padding-bottom: 10px;
 }
 /*************************CONTACTS*****************************************/
 .contacts__content {
@@ -553,7 +560,7 @@ body{
 .social {}
 .map_box {}
 /**********************PRODUCTS***************************************/
-.products {
+.products, .carusel__wrap {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 10px;
@@ -604,17 +611,20 @@ body{
     overflow: hidden;
     box-shadow: 0 2px 5px;
 }
+
 .product__content {
 	flex: 1 1 auto;
 	padding: 10px;
 	text-align: center;
 }
-.review {
-	min-width: 300px;
+.product__review {
 	text-align: center;
 	margin-bottom: 20px;
 	a {
 		padding: 0 10px;
+		&:hover {
+			background-color: #F4F4F4;
+		}
 	}
 	a:last-child {
 		border-left: 1px solid #555;
@@ -635,6 +645,7 @@ body{
 	font-weight: bold;
 	margin: 20px auto;
 }
+/*********************************TABS**********************************/
 .product__tabs {
 	margin-bottom: 20px;
 }
@@ -648,6 +659,12 @@ body{
 		border-bottom: none;
 		flex: 0 1 33.3333%;
 		position: relative;
+		&:hover {
+			background-color: #E9E0F3;
+		}
+		&:active {
+			background-color: #9E9DA8;
+		}
 	}
 	li:first-child {
 		border-top-left-radius: 5px;
@@ -670,7 +687,10 @@ body{
 		background: #F3F3F3;
 	}
 }
-.tabs__body {}
+
+.tabs__body {
+	line-height: 20px;
+}
 .tabs__content {
 	display: none;
 	background-color: #F3F3F3;
@@ -684,9 +704,124 @@ body{
 .act {
 		display: block;
 	}
+.tabs__description {}
+.tabs__specification {
+	tbody tr:hover {
+		background-color: #E9E0F3;
+	}
+	tbody tr td {
+		border-top: 1px solid #ddd;
+	}
+}
+.tabs__review {
+	div, h3 {
+		margin-bottom: 10px;
+	}
+}
+.form-wrap {
+	max-width: 400px;
+	margin: 0 auto;
+}
+.review__write {
+	
+}
+.review-name-user {
+	input {
+		height: 38px;
+		border-radius: 5px;
+		width: 100%;
+		padding: 5px 8px;	
+	}
+}
+.review-text-user {
+	textarea {
+		width: 100%;
+		padding: 5px 8px;
+		min-height: 80px;
+	}
+}
+
+.required:after {
+	content: '*';
+	color: #F3160E;
+}
+.review-raty {
+	display: flex;
+	align-items: center;
+	
+}
+.review-ratystar {
+	label:hover, label:hover ~ label, input:checked ~ label {
+		color: #FFDE00;
+	}
+}
+div.review-ratystar {
+	margin: 0 0 0 5px;
+	font-size: 20px;
+	display: flex;
+	flex-direction: row-reverse;
+	input {
+		display: none;
+	}
+	label {
+		cursor: pointer;
+		display: inline-block;
+		padding: 0 5px;
+	}
+}
+.review-subbutton {
+	button {
+		width: 150px;
+    	height: 38px;
+    	margin: 0 auto;
+		font-size: 14px;
+		border-radius: 5px;
+		background-color: #C5C5C5;
+		
+		&:hover {
+			box-shadow: 0 0 3px 2px #006699;
+		}
+		&:active {
+			box-shadow:inset 0 0 3px 2px #006699;
+		}
+	}
+}
+.carusel {
+	margin-bottom: 20px;
+}
+.carusel__wrap {
+	.item-btn {
+		width: 150px;
+		
+	}
+	
+}
 @media (max-width: 768px) {
 	.product__wrap {
 		flex-wrap: wrap;
+	}
+}
+@media (max-width: 480px) {
+	.tabs__list {
+		flex-direction: column;
+		&.tabs__list li {
+		border: 1px solid #62B7D8;
+		border-bottom: none;
+			&:first-child {
+			border-radius: 5px 5px 0 0;
+			}
+			&:last-child {
+				border-radius: 0;
+			}
+			&.act {
+  				background-color: #62B7D8;
+			}
+			&.act:after {
+				display: none;
+			}		
+		}
+	}
+	.tabs__content{
 	}
 }
 /*************************ABOUT BUY***************************************************/
@@ -939,7 +1074,7 @@ body{
 	padding: 30px 25px;
 	background-color: #fff;
 	position: relative;
-	span {
+	label span {
 		position: absolute;
 	    top: 2px;
 	    right: 2px;
@@ -985,13 +1120,15 @@ body{
 	textarea {
 			width: 100%;
 			min-height: 80px;
-			resize: vertical;
 			font-size: 15px;
 			padding: 9px 5px;
 			letter-spacing: -1px;
 			border-radius: 5px;
 			border: 2px solid #2196f3; 
 		}
+}
+.modal__phones {
+	display: none;
 }
 .modal__sub {
 	text-align: center;
@@ -1004,4 +1141,9 @@ body{
     font-size: 17px;
     margin-top: 10px;
     cursor: pointer;
+}
+@media (max-width: 480px) {
+	.modal__phones {
+	display: block;
+}
 }

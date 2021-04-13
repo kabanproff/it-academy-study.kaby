@@ -29,6 +29,10 @@ table {
   border-collapse: collapse;
 }
 
+textarea {
+  resize: vertical;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -255,7 +259,7 @@ body {
     margin-top: 47px;
   }
 
-  .contacts-tel__item {
+  .header__contacts-phones .contacts-tel__item {
     display: none;
   }
 
@@ -467,6 +471,9 @@ body {
 .catalog__item a:hover {
   background-color: #b7f0f0;
 }
+.catalog__item a:active {
+  box-shadow: inset 0 0 5px #006699;
+}
 
 .catalog__item_active a, .catalog__item_active a:hover {
   background-color: #006699;
@@ -558,6 +565,7 @@ body {
 
 .main__content {
   flex: 1 1 auto;
+  padding-bottom: 10px;
 }
 
 /*************************CONTACTS*****************************************/
@@ -595,7 +603,7 @@ body {
 }
 
 /**********************PRODUCTS***************************************/
-.products {
+.products, .carusel__wrap {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
@@ -657,15 +665,17 @@ body {
   text-align: center;
 }
 
-.review {
-  min-width: 300px;
+.product__review {
   text-align: center;
   margin-bottom: 20px;
 }
-.review a {
+.product__review a {
   padding: 0 10px;
 }
-.review a:last-child {
+.product__review a:hover {
+  background-color: #F4F4F4;
+}
+.product__review a:last-child {
   border-left: 1px solid #555;
   display: inline-block;
 }
@@ -685,6 +695,7 @@ body {
   margin: 20px auto;
 }
 
+/*********************************TABS**********************************/
 .product__tabs {
   margin-bottom: 20px;
 }
@@ -699,6 +710,12 @@ body {
   border-bottom: none;
   flex: 0 1 33.3333%;
   position: relative;
+}
+.tabs__list li:hover {
+  background-color: #E9E0F3;
+}
+.tabs__list li:active {
+  background-color: #9E9DA8;
 }
 .tabs__list li:first-child {
   border-top-left-radius: 5px;
@@ -721,6 +738,10 @@ body {
   background: #F3F3F3;
 }
 
+.tabs__body {
+  line-height: 20px;
+}
+
 .tabs__content {
   display: none;
   background-color: #F3F3F3;
@@ -736,9 +757,111 @@ body {
   display: block;
 }
 
+.tabs__specification tbody tr:hover {
+  background-color: #E9E0F3;
+}
+.tabs__specification tbody tr td {
+  border-top: 1px solid #ddd;
+}
+
+.tabs__review div, .tabs__review h3 {
+  margin-bottom: 10px;
+}
+
+.form-wrap {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.review-name-user input {
+  height: 38px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px 8px;
+}
+
+.review-text-user textarea {
+  width: 100%;
+  padding: 5px 8px;
+  min-height: 80px;
+}
+
+.required:after {
+  content: "*";
+  color: #F3160E;
+}
+
+.review-raty {
+  display: flex;
+  align-items: center;
+}
+
+.review-ratystar label:hover, .review-ratystar label:hover ~ label, .review-ratystar input:checked ~ label {
+  color: #FFDE00;
+}
+
+div.review-ratystar {
+  margin: 0 0 0 5px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+div.review-ratystar input {
+  display: none;
+}
+div.review-ratystar label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.review-subbutton button {
+  width: 150px;
+  height: 38px;
+  margin: 0 auto;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #C5C5C5;
+}
+.review-subbutton button:hover {
+  box-shadow: 0 0 3px 2px #006699;
+}
+.review-subbutton button:active {
+  box-shadow: inset 0 0 3px 2px #006699;
+}
+
+.carusel {
+  margin-bottom: 20px;
+}
+
+.carusel__wrap .item-btn {
+  width: 150px;
+}
+
 @media (max-width: 768px) {
   .product__wrap {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  .tabs__list {
+    flex-direction: column;
+  }
+  .tabs__list.tabs__list li {
+    border: 1px solid #62B7D8;
+    border-bottom: none;
+  }
+  .tabs__list.tabs__list li:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+  .tabs__list.tabs__list li:last-child {
+    border-radius: 0;
+  }
+  .tabs__list.tabs__list li.act {
+    background-color: #62B7D8;
+  }
+  .tabs__list.tabs__list li.act:after {
+    display: none;
   }
 }
 /*************************ABOUT BUY***************************************************/
@@ -996,7 +1119,7 @@ body {
   background-color: #fff;
   position: relative;
 }
-.modal__content span {
+.modal__content label span {
   position: absolute;
   top: 2px;
   right: 2px;
@@ -1039,12 +1162,15 @@ body {
 .modal__textarea textarea {
   width: 100%;
   min-height: 80px;
-  resize: vertical;
   font-size: 15px;
   padding: 9px 5px;
   letter-spacing: -1px;
   border-radius: 5px;
   border: 2px solid #2196f3;
+}
+
+.modal__phones {
+  display: none;
 }
 
 .modal__sub {
@@ -1059,4 +1185,10 @@ body {
   font-size: 17px;
   margin-top: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .modal__phones {
+    display: block;
+  }
 }
