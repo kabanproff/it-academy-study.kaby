@@ -748,6 +748,8 @@ body {
   padding: 10px;
   border: 1px solid #62B7D8;
   border-radius: 0 0 5px 5px;
+  transition: all 1s ease 1s;
+  opacity: 0;
 }
 .tabs__content table {
   width: 100%;
@@ -755,6 +757,7 @@ body {
 
 .act {
   display: block;
+  opacity: 1;
 }
 
 .tabs__specification tbody tr:hover {

@@ -697,12 +697,15 @@ body{
 	padding: 10px;
 	border: 1px solid #62B7D8;
 	border-radius: 0 0 5px 5px;
+	transition: all 1s ease 1s;
+	opacity: 0;
 	table {
 		width: 100%;
 	}
 }
 .act {
 		display: block;
+		opacity: 1;
 	}
 .tabs__description {}
 .tabs__specification {
@@ -820,8 +823,6 @@ div.review-ratystar {
 				display: none;
 			}		
 		}
-	}
-	.tabs__content{
 	}
 }
 /*************************ABOUT BUY***************************************************/
