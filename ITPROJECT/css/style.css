@@ -1,10 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "RobotoRegular";
-  src: url("../fonts/RobotoRegular.eot");
-  /*src: url('../fonts/RobotoRegular.eot') format('embedded-opentype'),
-       url('../fonts/RobotoRegular.woff2') format('woff2'),*/
-  src: url("../fonts/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular.ttf") format("truetype");
+  src: url("fonts/RobotoRegular.eot");
+  src: local("../fonts/RobotoRegular.eot"), url("../fonts/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular.woff2") format("woff2"), url("../fonts/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular.ttf") format("truetype"), url("../fonts/RobotoRegular.svg#RobotoRegular") format("svg");
 }
 * {
   margin: 0;
@@ -299,6 +297,9 @@ body {
   color: white;
   font-size: 12px;
   text-align: center;
+  cursor: pointer;
+}
+.btn p label {
   cursor: pointer;
 }
 

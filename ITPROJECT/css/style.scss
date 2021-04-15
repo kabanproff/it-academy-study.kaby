@@ -1,11 +1,13 @@
 @font-face {
     font-family: 'RobotoRegular';
-   src: url('../fonts/RobotoRegular.eot');
-    /*src: url('../fonts/RobotoRegular.eot') format('embedded-opentype'),
-         url('../fonts/RobotoRegular.woff2') format('woff2'),*/
-    src: url('../fonts/RobotoRegular.woff') format('woff'),
-       	url('../fonts/RobotoRegular.ttf') format('truetype'),
-         /*url('../fonts/RobotoRegular.svg#RobotoRegular') format('svg');*/
+    src: url('fonts/RobotoRegular.eot');
+	src: local('../fonts/RobotoRegular.eot'),
+    	 url('../fonts/RobotoRegular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoRegular.woff2') format('woff2'),
+    	 url('../fonts/RobotoRegular.woff') format('woff'),
+       	 url('../fonts/RobotoRegular.ttf') format('truetype'),
+         url('../fonts/RobotoRegular.svg#RobotoRegular') format('svg');
+         
 }
 
 * {
@@ -273,7 +275,10 @@ body{
 			color: white;
     		font-size: 12px;
     		text-align: center;
-    		cursor: pointer;	
+    		cursor: pointer;
+    		label{
+    			cursor: pointer;
+    		}	
 		}
 }
 .btn-callback {
@@ -592,15 +597,13 @@ body{
 .map_box {}
 /**********************PRODUCTS***************************************/
 .products, .carusel__wrap {
-	display: -ms-grid;
+	
 	display: grid;
-	-ms-grid-columns: (minmax(200px, 1fr))[6] 10px;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-gap: 10px;
 	gap: 10px;
 }
 .products__item {
-	display: -ms-grid;
 	display: grid;
 	grid-auto-flow: row;
 	grid-template: auto 1fr 40px / 1fr;
