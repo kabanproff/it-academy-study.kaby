@@ -387,9 +387,15 @@ body {
 .slider__btn:hover {
   text-shadow: 0 0 5px #fff;
 }
+.slider__btn:active {
+  transform: scale(0.8);
+}
 .slider__btn p {
   padding: 18px 10px;
   font-size: 18px;
+}
+.slider__btn .slider-btn-label {
+  padding: 20px;
 }
 
 @keyframes backgr {
@@ -1103,7 +1109,6 @@ div.review-ratystar label {
 
 /****************MODAL*******************************************/
 .modal1, .modal2 {
-  display: none;
   position: fixed;
   left: 0;
   right: 0;
@@ -1111,6 +1116,10 @@ div.review-ratystar label {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+  transform: scale(0);
 }
 
 .modal__box {
@@ -1141,14 +1150,18 @@ div.review-ratystar label {
   display: none;
 }
 #modal__check1:checked ~ .modal1 {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) rotate(360deg);
 }
 
 #modal__check2 {
   display: none;
 }
 #modal__check2:checked ~ .modal2 {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) rotate(360deg);
 }
 
 .modal__title {
@@ -1197,4 +1210,36 @@ div.review-ratystar label {
   .modal__phones {
     display: block;
   }
+}
+/*.modal__gall {
+	display: none;
+	position: fixed;
+	top: 0;left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0 0 0.7);
+}*/
+.image-source-link {
+  color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
 }
