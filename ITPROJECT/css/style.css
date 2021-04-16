@@ -947,6 +947,9 @@ div.review-ratystar label {
   }
 }
 /**********************OFFER ITEMS***************************************************/
+.offer__price-old {
+  margin-top: 15px;
+}
 .offer__price-old span {
   position: relative;
   color: red;
