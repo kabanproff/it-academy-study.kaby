@@ -16,7 +16,7 @@ $(document).ready(function() {
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 3000,
   arrows: false,
   pauseOnFocus:false,
   responsive:[
@@ -40,20 +40,7 @@ $(document).ready(function() {
     }
   ],
   });
-/*    $('.popup__box').slick({
-  dots: false,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  swipeToSlide: true,
-  touchMove: true,
-  pauseOnFocus:false,
-  pauseonHover: false,
-});*/
+
 });
 
 
