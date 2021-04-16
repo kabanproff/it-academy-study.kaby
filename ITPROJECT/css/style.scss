@@ -309,6 +309,9 @@ body{
 	background-color: #000;
 	position: relative;
 	z-index: 1;
+	.slick-list {
+	overflow: hidden;
+}
 }
 .item{
 	img{
@@ -318,7 +321,7 @@ body{
 
 	}
 }
-.slick-list {
+	.slick-list {
 	overflow: hidden;
 }
 /* Лента слайдов */
@@ -1233,37 +1236,17 @@ div.review-ratystar {
 	display: block;
 }
 }
-/*.modal__gall {
-	display: none;
-	position: fixed;
-	top: 0;left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0 0 0.7);
-}*/
-.image-source-link {
-	color: #98C3D1;
+.popup__box {	
 }
-
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-	opacity: 0;
-	-webkit-backface-visibility: hidden;
-	/* ideally, transition speed should match zoom duration */
-	-webkit-transition: all 0.3s ease-out; 
-	-moz-transition: all 0.3s ease-out; 
-	-o-transition: all 0.3s ease-out; 
-	transition: all 0.3s ease-out;
+.box__gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
-
-.mfp-with-zoom.mfp-ready .mfp-container {
-		opacity: 1;
+.popup__item {
+	max-width: 200px;
 }
-.mfp-with-zoom.mfp-ready.mfp-bg {
-		opacity: 0.8;
-}
-
-.mfp-with-zoom.mfp-removing .mfp-container, 
-.mfp-with-zoom.mfp-removing.mfp-bg {
-	opacity: 0;
+.box__gallery-frame {
+	display: flex;
+	justify-content: center;
 }

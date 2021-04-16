@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../../css/style-icomoon.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.fancybox.css">
 	<title>РЫБАЧЁК</title>
 </head>
 <body>
@@ -157,7 +158,7 @@
 							<div class="product__body">
 								<div class="product__wrap">
 									<div class="product__image">
-										<a href="#">
+										<a data-fancybox data-src="#hidden-content" href="javascript:;">
 											<img class="img-adapt" src="../../img/rods/1spinning-akara-black-hunter-ml702-2-1m-4-18gr-650x650.jpg" alt="spinning-akara-black-hunter">
 										</a>
 									</div>
@@ -510,9 +511,34 @@
 			</div>
 		</div>
 	</div>
+    <div class="popup" style="display: none;" id="hidden-content">
+    	<div class="popup__box">
+            <div class="box__gallery">
+        		<a class="popup__item" href="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-2-650x650.jpg" data-fancybox="images" data-caption="spinning-akara-black-hunter-ml702-2">
+            		<img class="img-adapt" src="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-2-650x650.jpg" alt="spinning-akara-black-hunter-ml702">
+            	</a>
+            	<a class="popup__item" href="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-3-650x650.jpg" data-fancybox="images" data-caption="spinning-akara-black-hunter-ml702-3">
+            		<img class="img-adapt" src="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-3-650x650.jpg" alt="spinning-akara-black-hunter-ml702">
+            	</a>
+            	<a class="popup__item"  href="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-4-650x650.jpg" data-fancybox="images" data-caption="spinning-akara-black-hunter-ml702-4">
+            		<img class="img-adapt" src="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-4-650x650.jpg" alt="spinning-akara-black-hunter-ml702">
+            	</a>	
+            	<a class="popup__item"  href="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-5-650x650.jpg" data-fancybox="images" data-caption="spinning-akara-black-hunter-ml702-5">
+            		<img class="img-adapt" src="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-5-650x650.jpg" alt="spinning-akara-black-hunter-ml702">
+            	</a>	
+            	<a class="popup__item"  href="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-650x650.jpg" data-fancybox="images" data-caption="spinning-akara-black-hunter-ml702-1">
+            		<img class="img-adapt" src="../../img/rods/popup/spinning-akara-black-hunter-ml702-2-1m-4-18gr-650x650.jpg" alt="spinning-akara-black-hunter-ml702">
+            	</a>
+            	<a data-fancybox data-type="iframe" data-src="https://youtu.be/tgvuGTHciTQ" href="javascript:;">
+					<iframe src="https://www.youtube.com/embed/tgvuGTHciTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</a>
+            </div>
+        </div>  
+	</div>
 	<script src="../../js/jquery-3.6.0.min.js"></script>
 	<script src="../../js/script-project.js"></script>
 	<script src="../../js/dynamicAdapt.js"></script>
 	<script src="../../js/slick.min.js"></script>
+	<script src="../../js/jquery.fancybox.min.js"></script>
 </body>
 </html>
