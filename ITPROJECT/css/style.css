@@ -673,10 +673,10 @@ body {
   overflow: hidden;
 }
 
-.products__name {
+.products__name, .offer__text {
   color: #3F3F3F;
 }
-.products__name:hover {
+.products__name:hover, .offer__text:hover {
   color: #006699;
 }
 
@@ -834,6 +834,7 @@ body {
 .review-raty {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .review-ratystar label:hover, .review-ratystar label:hover ~ label, .review-ratystar input:checked ~ label {
@@ -876,6 +877,22 @@ div.review-ratystar label {
 
 .carusel__wrap .item-btn {
   width: 150px;
+}
+
+/*****************************popup-gallery*********************************/
+.box__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.popup__item {
+  max-width: 200px;
+}
+
+.box__gallery-frame {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -1046,6 +1063,10 @@ div.review-ratystar label {
   height: 100%;
 }
 
+.reviews__img {
+  padding: 20px;
+}
+
 .reviews__text {
   flex: 1 1 auto;
   margin-bottom: 10px;
@@ -1181,6 +1202,15 @@ div.review-ratystar label {
   border-radius: 50%;
   cursor: pointer;
 }
+.modal__content label span:hover {
+  box-shadow: inset 0 0 4px 5px #3498DB, 0 0 1px 1px #333;
+  font-size: 21px;
+  top: 1px;
+}
+.modal__content label span:active {
+  box-shadow: inset 0 0 4px 5px #004B8E;
+  font-size: 19px;
+}
 
 #modal__check1 {
   display: none;
@@ -1241,23 +1271,15 @@ div.review-ratystar label {
   margin-top: 10px;
   cursor: pointer;
 }
+.modal__btn:hover {
+  box-shadow: inset 0 0 4px 5px #3498DB;
+}
+.modal__btn:active {
+  box-shadow: inset 0 0 4px 5px #004B8E;
+}
 
 @media (max-width: 480px) {
   .modal__phones {
     display: block;
   }
-}
-.box__gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.popup__item {
-  max-width: 200px;
-}
-
-.box__gallery-frame {
-  display: flex;
-  justify-content: center;
 }
